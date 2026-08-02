@@ -1,0 +1,332 @@
+/* ---------- Tokens ---------- */
+:root{
+  --navy: #10274A;
+  --navy-deep: #0A1B33;
+  --gold: #EFBF4C;
+  --gold-deep: #A8791E;
+  --cream: #F6F1E4;
+  --cream-soft: #FBF8F0;
+  --ink: #16233B;
+  --ink-soft: #445071;
+  --white: #FFFFFF;
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --shadow-soft: 0 10px 30px rgba(16, 39, 74, 0.16);
+  --shadow-lift: 0 16px 34px rgba(16, 39, 74, 0.26);
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+img{ max-width: 100%; display: block; }
+button{ font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+h1, h2, h3{ font-family: var(--font-display); color: var(--ink); margin: 0; }
+
+.visually-hidden{
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:
+    radial-gradient(circle at 50% -10%, rgba(239,191,76,0.16), transparent 60%),
+    linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+  padding: clamp(2.5rem, 6vw, 4.5rem) 1.25rem clamp(3rem, 7vw, 5rem);
+  text-align: center;
+}
+.hero-inner{ max-width: 640px; margin: 0 auto; }
+.eyebrow{
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--gold);
+  margin: 0 0 0.9rem;
+}
+.hero h1{
+  color: var(--white);
+  font-weight: 600;
+  font-size: clamp(2.1rem, 5.5vw, 3.2rem);
+  letter-spacing: -0.01em;
+}
+.hero .lede{
+  color: #D9E0EE;
+  font-size: clamp(0.95rem, 2vw, 1.08rem);
+  max-width: 46ch;
+  margin: 1.1rem auto 0;
+}
+
+/* ---------- Wheel section ---------- */
+.wheel-section{
+  padding: clamp(2.75rem, 7vw, 4.5rem) 1rem clamp(3.5rem, 8vw, 5.5rem);
+}
+.wheel{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "a b c"
+    "d crest e"
+    "f g h";
+  align-items: center;
+  justify-items: center;
+  gap: clamp(0.6rem, 3vw, 2rem) clamp(0.4rem, 2.5vw, 1.75rem);
+  max-width: 700px;
+  margin: 0 auto;
+}
+.area-a{ grid-area: a; } .area-b{ grid-area: b; } .area-c{ grid-area: c; }
+.area-d{ grid-area: d; } .area-e{ grid-area: e; }
+.area-f{ grid-area: f; } .area-g{ grid-area: g; } .area-h{ grid-area: h; }
+
+/* ---------- Crest (centre badge) ---------- */
+.crest-wrap{
+  grid-area: crest;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+.crest-btn{
+  position: relative;
+  width: 100%;
+  max-width: clamp(132px, 25vw, 212px);
+  display: block;
+  transition: transform 0.25s ease;
+}
+.crest-btn:hover, .crest-btn:focus-visible{ transform: translateY(-3px); }
+.halo{
+  position: absolute;
+  inset: -20%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(239,191,76,0.55) 0%, rgba(239,191,76,0.18) 45%, rgba(239,191,76,0) 72%);
+  animation: pulse 3.6s ease-in-out infinite;
+  z-index: 0;
+}
+@keyframes pulse{
+  0%, 100% { transform: scale(0.94); opacity: 0.75; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+.crest-circle{
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid var(--gold);
+  box-shadow: var(--shadow-lift);
+  background: var(--cream-soft);
+}
+.crest-circle img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.crest-label{
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  font-size: clamp(0.85rem, 2.1vw, 1.05rem);
+  letter-spacing: 0.02em;
+}
+.crest-hint{
+  margin: 0;
+  font-size: 0.72rem;
+  color: var(--gold-deep);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- Medallions (the eight essentials) ---------- */
+.medallion-btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: clamp(74px, 15vw, 128px);
+  opacity: 0;
+  animation: rise 0.6s ease forwards;
+}
+.area-a{ animation-delay: 0.05s; } .area-b{ animation-delay: 0.1s; }
+.area-c{ animation-delay: 0.15s; } .area-d{ animation-delay: 0.2s; }
+.area-e{ animation-delay: 0.25s; } .area-f{ animation-delay: 0.3s; }
+.area-g{ animation-delay: 0.35s; } .area-h{ animation-delay: 0.4s; }
+@keyframes rise{
+  from{ opacity: 0; transform: translateY(10px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+.medallion-circle{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: var(--navy);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border: 2px solid transparent;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.medallion-circle img{ width: 100%; height: 100%; object-fit: contain; }
+.medallion-btn:hover .medallion-circle,
+.medallion-btn:focus-visible .medallion-circle{
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: var(--shadow-lift);
+  border-color: var(--gold);
+}
+.medallion-label{
+  font-size: clamp(0.66rem, 1.9vw, 0.82rem);
+  font-weight: 600;
+  color: var(--ink);
+  text-align: center;
+  line-height: 1.25;
+  max-width: 16ch;
+}
+
+/* ---------- Focus states ---------- */
+button:focus-visible{
+  outline: 2.5px solid var(--gold-deep);
+  outline-offset: 3px;
+}
+.crest-btn:focus-visible{ border-radius: 20px; }
+.medallion-btn:focus-visible{ outline: none; }
+.medallion-btn:focus-visible .medallion-circle{
+  outline: 2.5px solid var(--gold-deep);
+  outline-offset: 3px;
+}
+.medallion-btn:hover .medallion-label,
+.medallion-btn:focus-visible .medallion-label{ color: var(--gold-deep); }
+
+/* ---------- Footer ---------- */
+.site-footer{
+  border-top: 1px solid rgba(16,39,74,0.12);
+  text-align: center;
+  padding: 1.6rem 1rem 2.2rem;
+}
+.site-footer p{
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Floating info button ---------- */
+.info-fab{
+  position: fixed;
+  right: 1.1rem;
+  bottom: calc(1.1rem + env(safe-area-inset-bottom, 0px));
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow-lift);
+  border: 2px solid var(--gold);
+  z-index: 40;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.info-fab:hover, .info-fab:focus-visible{
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* ---------- Modal ---------- */
+.modal{
+  border: none;
+  border-radius: 22px;
+  padding: clamp(1.6rem, 5vw, 2.6rem);
+  max-width: 480px;
+  width: min(90vw, 480px);
+  background: var(--cream-soft);
+  color: var(--ink-soft);
+  box-shadow: 0 30px 60px rgba(10, 27, 51, 0.35);
+  position: fixed;
+  margin: auto;
+  inset: 0;
+  max-height: min(82vh, 640px);
+  overflow-y: auto;
+}
+.modal::backdrop{
+  background: rgba(10, 20, 38, 0.55);
+  backdrop-filter: blur(2px);
+}
+.modal[open]{
+  animation: modal-in 0.28s ease;
+}
+@keyframes modal-in{
+  from{ opacity: 0; transform: translateY(10px) scale(0.98); }
+  to{ opacity: 1; transform: translateY(0) scale(1); }
+}
+.modal-close{
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(16,39,74,0.08);
+  font-size: 1.3rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  color: var(--navy);
+}
+.modal-close:hover{ background: rgba(16,39,74,0.16); }
+.modal-icon{
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--navy);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+.modal-icon img{ width: 100%; height: 100%; object-fit: contain; }
+.modal-icon-glyph{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--gold);
+  line-height: 1;
+}
+.modal h2{
+  font-size: clamp(1.2rem, 3.4vw, 1.55rem);
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+.modal-body p{
+  margin: 0 0 0.85rem;
+  font-size: 0.98rem;
+}
+.modal-body p:last-child{ margin-bottom: 0; }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  .halo{ animation: none; opacity: 0.85; }
+  .medallion-btn{ animation: none; opacity: 1; }
+  .crest-btn:hover, .crest-btn:focus-visible{ transform: none; }
+  .medallion-btn:hover .medallion-circle, .medallion-btn:focus-visible .medallion-circle{ transform: none; }
+  .info-fab:hover, .info-fab:focus-visible{ transform: none; }
+  .modal[open]{ animation: none; }
+}
