@@ -71,8 +71,8 @@ const content = {
     title: "How I Made This Website",
     icon: '<span class="modal-icon-glyph">?</span>',
     body: [
-      "To make this website, I researched all of the information myself and wrote it up in a document. I then asked a special coding AI to take my information and turn it into a website, using HTM[...]
-      "It wrote all thirteen files needed, and I uploaded to a GitHub repositary on a platform called GitHub, which hosts the page using a feature called GitHub Pages that deploys the website from[...]
+      "To make this website, I researched all of the information myself and wrote it up in a document. I then asked a special coding AI to take my information and turn it into a website, using HTMl
+      "It wrote all thirteen files needed, and I uploaded to a GitHub repositary on a platform called GitHub, which hosts the page using a feature called GitHub Pages that deploys the website from"
     ]
   }
 };
