@@ -71,8 +71,11 @@ const content = {
     title: "How I Made This Website",
     icon: '<span class="modal-icon-glyph">?</span>',
     body: [
-      "To make this website, I researched all of the information myself and wrote it up in a document. I then asked a special coding AI to take my information and turn it into a website, using HTML, JavaScript and CSS to build this design and all of its functions. I uploaded all the images I wanted included and told it where to put everything.",
-      "It wrote all thirteen files needed, and I uploaded to a GitHub repositary on a platform called GitHub, which hosts the page using a feature called GitHub Pages that deploys the website from the repositarys main branch."
+      "To make this website, I did the following:
+      1. I researched all of the information myself and wrote it up the 8 essentials of Edmund Rice in a Word document. 
+      2. I then asked a special coding AI to take my information and turn it into a website, using HTML, JavaScript and CSS to build this design and all of its functions. I had to describe the design and I drew a sketch of what I wanted the website to look like and uploaded it. 
+      3. I uploaded all the images I wanted included and told it where to put everything.
+      4. It wrote all thirteen files needed, and I uploaded to a GitHub repositary on a platform called GitHub, which hosts the page using a feature called GitHub Pages that deploys the website from the repositarys main branch."
     ]
   }
 };
