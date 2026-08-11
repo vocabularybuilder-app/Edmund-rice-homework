@@ -1,6 +1,6 @@
 # St Ambrose — Blessed Edmund Rice & the Eight Essentials
 
-A single-page interactive site built for St Ambrose. The college crest sits at the centre with the Eight Essentials arranged around it. Tap the crest to meet Blessed Edmund Rice; tap any of the eight emblems to see how that essential connects to his life. A small "?" button in the bottom-right corner explains how the site itself was made.
+A single-page interactive site built for St Ambrose. The college crest sits at the centre with the Eight Essentials arranged around it. Tap the crest to meet Blessed Edmund Rice; tap any of the eight medallions to open a pop-up with more information.
 
 Made by Sebastian.
 
@@ -38,5 +38,5 @@ No build step or installs needed — it's plain HTML, CSS and JavaScript. Either
 ## Editing the content
 
 - **Text in the pop-ups** — open `script.js` and edit the `content` object near the top. Each entry has a `title` and a `body`.
-- **Icons** — each entry in the `content` object in `script.js` has an `icon` field holding the image itself (as embedded data), not a file path. To swap one, base64-encode your replacement image and paste the new string in as that entry's `icon`.
+- **Icons** — each entry in the `content` object in `script.js` has an `icon` field holding the image itself (as embedded data), not a file path. To swap one, base64-encode your replacement image and paste it into that field.
 - **Footer credit** — edit the `<footer>` near the bottom of `index.html`.
