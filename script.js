@@ -1,3 +1,6 @@
+console.log('script.js loaded');
+window.addEventListener('error', e => console.error('JS error:', e.message, e.filename + ':' + e.lineno));
+
 // ---------- Content for the crest and the eight essentials ----------
 // Edit the text below to change what appears in the pop-up windows.
 
