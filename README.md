@@ -40,3 +40,5 @@ No build step or installs needed — it's plain HTML, CSS and JavaScript. Either
 - **Text in the pop-ups** — open `script.js` and edit the `content` object near the top. Each entry has a `title` and a `body`.
 - **Icons** — each entry in the `content` object in `script.js` has an `icon` field holding the image itself (as embedded data), not a file path. To swap one, base64-encode your replacement image and paste it into that field.
 - **Footer credit** — edit the `<footer>` near the bottom of `index.html`.
+
+<!-- Rebuild trigger: 2026-08-11T17:30:00Z -->
