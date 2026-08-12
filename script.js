@@ -71,8 +71,10 @@ const content = {
     title: "How I Made This Website",
     icon: '<span class="modal-icon-glyph">?</span>',
     body: [
-      "To make this website, I researched all of the information myself and wrote it up in a document. I then asked a special coding AI to take my information and turn it into a website, using HTML, JavaScript and CSS to build this design and all of its functions. I uploaded all the images I wanted included and told it where to put everything.",
-      "It wrote all thirteen files needed, and I uploaded them to a website called GitHub, which hosts the page using a feature called GitHub Pages that deploys the website. The web address it produces is random, but I could choose the ending as part of an app I had already made. You can choose the whole address, but that feature needs to be paid for."
+      "To make this website I did the following:
+1. I researched all of the information about the 8 essentials of Edmund Rice myself and wrote them up in a word document.",
+      "2. I then drew a drawing of the design of the website that I wanted to create."
+      "3. I used AI to create icons under each of the 8 essentials of Edmund rice."
     ]
   }
 };
