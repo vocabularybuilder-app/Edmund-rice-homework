@@ -71,7 +71,14 @@ const content = {
     title: "How I Made This Website",
     icon: '<span class="modal-icon-glyph">?</span>',
     body: [
-      "To make this website I did the following: I researched all of the information about the 8 essentials of Edmund Rice myself and wrote them up in a word document. I then drew a drawing of the design of the website that I wanted to create. I used AI to create icons under each of the 8 essentials of Edmund rice. Then I asked a special coding AI to use my information in my document and turn it into a website. Using HTML, Java Script and CCS it took all the information and design to build the functions of the website that I had designed and instructed. The coding AI wrote all the files that I needed and I uploaded these to a website called GitHub. I made a repository and used a feature in GitHub to host these files as a website. The web address it produces is random, but I selected a domain name which matched the content of the website. I hope you enjoy reading about the eight essentials of Edmund Rice in my website - edmundrice.co.uk. "
+      "To make this website I did the following: "
+       "1. I researched all of the information about the 8 essentials of Edmund Rice myself and wrote them up in a word document. "
+        "2. I then drew a drawing of the design of the website that I wanted to create." 
+        "3. I used AI to create icons under each of the 8 essentials of Edmund rice.
+        "4. Then I asked a special coding AI to use my information in my document and turn it into a website. Using HTML, Java Script and CCS it took all the information and design to build the functions of the website that I had designed and instructed."
+        "5. The coding AI wrote all the files that I needed and I uploaded these to a website called GitHub. I made a repository and used a feature in GitHub to host these files as a website."
+        "6. The web address it produces is random, but I selected a domain name which matched the content of the website."
+        "7. I hope you enjoy reading about the eight essentials of Edmund Rice in my website - edmundrice.co.uk "
     ]
   }
 };
